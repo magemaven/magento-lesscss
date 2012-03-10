@@ -58,7 +58,7 @@ class Magemaven_Lesscss_Helper_Data extends Mage_Core_Helper_Abstract
 
             if ($cache['updated'] > $lastUpdated) {
                 if (!file_exists(dirname($targetFilename))) {
-                    mkdir(dirname($targetFilename), null, true);
+                    mkdir(dirname($targetFilename), 0777, true);
                 }
 
                 file_put_contents($targetFilename, $cache['compiled']);
