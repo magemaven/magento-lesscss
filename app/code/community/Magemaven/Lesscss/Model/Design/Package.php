@@ -14,11 +14,40 @@ class Magemaven_Lesscss_Model_Design_Package extends Mage_Core_Model_Design_Pack
 {
     public function getSkinUrl($file = null, array $params = array())
     {
-        return parent::getSkinUrl($file, $params);
+        if (empty($params['_type'])) {
+            $params['_type'] = 'skin';
+        }
+
+        /** @var $helper Magemaven_Lesscss_Helper_Data */
+        $helper = Mage::helper('lesscss');
+
+        if ($helper->getFileExtension($file) == 'less') {
+            $file = $this->getFilename($file, $params);
+
+            if ($file) {
+                $file = str_replace(Mage::getBaseDir('media') . DS, '', $file);
+                $file = str_replace('\\', '/', $file);
+                $file = Mage::getBaseUrl('media',
+                        isset($params['_secure']) ? (bool)$params['_secure'] : null
+                    ) . $file;
+            }
+        } else {
+            $file = parent::getSkinUrl($file, $params);
+        }
+
+        return $file;
     }
 
     public function getFilename($file, array $params)
     {
-        return parent::getFilename($file, $params);
+        /** @var $helper Magemaven_Lesscss_Helper_Data */
+        $helper = Mage::helper('lesscss');
+
+        $file = parent::getFilename($file, $params);
+        if ($helper->getFileExtension($file) == 'less') {
+            $file = $helper->compile($file);
+        }
+
+        return $file;
     }
 }

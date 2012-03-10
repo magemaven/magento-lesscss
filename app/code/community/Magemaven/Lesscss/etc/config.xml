@@ -34,15 +34,5 @@
                 <class>Magemaven_Lesscss_Helper</class>
             </lesscss>
         </helpers>
-        <blocks>
-            <lesscss>
-                <class>Magemaven_Lesscss_Block</class>
-            </lesscss>
-            <page>
-                <rewrite>
-                    <html_head>Magemaven_Lesscss_Block_Html_Head</html_head>
-                </rewrite>
-            </page>
-        </blocks>
     </global>
 </config>
