@@ -19,10 +19,30 @@
         </Magemaven_Lesscss>
     </modules>
     <global>
+        <models>
+            <lesscss>
+                <class>Magemaven_Lesscss_Model</class>
+            </lesscss>
+            <core>
+                <rewrite>
+                    <design_package>Magemaven_Lesscss_Model_Design_Package</design_package>
+                </rewrite>
+            </core>
+        </models>
         <helpers>
             <lesscss>
                 <class>Magemaven_Lesscss_Helper</class>
             </lesscss>
         </helpers>
+        <blocks>
+            <lesscss>
+                <class>Magemaven_Lesscss_Block</class>
+            </lesscss>
+            <page>
+                <rewrite>
+                    <html_head>Magemaven_Lesscss_Block_Html_Head</html_head>
+                </rewrite>
+            </page>
+        </blocks>
     </global>
 </config>
