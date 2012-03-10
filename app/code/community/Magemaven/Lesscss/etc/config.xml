@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!--
+/**
+* This source file is subject to the Academic Free License (AFL 3.0)
+* that is bundled with this package in the file LICENSE_AFL.txt.
+* It is also available through the world-wide-web at this URL:
+* http://opensource.org/licenses/afl-3.0.php
+*
+* @category    Magemaven
+* @package     Magemaven_Lesscss
+* @copyright   Copyright (c) 2012 Sergey Storchay <r8@r8.com.ua>
+* @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+*/
+-->
+<config>
+    <modules>
+        <Magemaven_Lesscss>
+            <version>1.0.0.0</version>
+        </Magemaven_Lesscss>
+    </modules>
+    <global>
+        <models>
+            <lesscss>
+                <class>Magemaven_Lesscss_Model</class>
+            </lesscss>
+            <core>
+                <rewrite>
+                    <design_package>Magemaven_Lesscss_Model_Design_Package</design_package>
+                </rewrite>
+            </core>
+        </models>
+        <helpers>
+            <lesscss>
+                <class>Magemaven_Lesscss_Helper</class>
+            </lesscss>
+        </helpers>
+    </global>
+</config>
