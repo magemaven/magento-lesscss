@@ -12,6 +12,13 @@
  */
 class Magemaven_Lesscss_Model_Design_Package extends Mage_Core_Model_Design_Package
 {
+    /**
+     * Get skin file url
+     *
+     * @param null $file
+     * @param array $params
+     * @return string
+     */
     public function getSkinUrl($file = null, array $params = array())
     {
         if (empty($params['_type'])) {
@@ -38,6 +45,13 @@ class Magemaven_Lesscss_Model_Design_Package extends Mage_Core_Model_Design_Pack
         return $file;
     }
 
+    /**
+     * Compile less file and return css file name
+     *
+     * @param string $file
+     * @param array $params
+     * @return string
+     */
     public function getFilename($file, array $params)
     {
         /** @var $helper Magemaven_Lesscss_Helper_Data */
