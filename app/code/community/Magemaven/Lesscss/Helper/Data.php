@@ -39,7 +39,7 @@ class Magemaven_Lesscss_Helper_Data extends Mage_Core_Helper_Abstract
 
         try {
             $targetFilename = Mage::getBaseDir('media')
-                . DS . 'lesscss' . DS . md5($file) . '.css';
+                . DS . 'lesscss' . DS . md5_file($file) . '.css';
             $cacheKey = 'less_' . $file;
 
             /** @var $cacheModel Mage_Core_Model_Cache */
