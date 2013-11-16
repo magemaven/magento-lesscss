@@ -35,4 +35,28 @@
             </lesscss>
         </helpers>
     </global>
+    <adminhtml>
+        <acl>
+            <resources>
+                <all>
+                    <title>Allow Everything</title>
+                </all>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <lesscss translate="title" module="lesscss">
+                                            <title>Magemaven - Lesscss</title>
+                                        </lesscss>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                   </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
 </config>
