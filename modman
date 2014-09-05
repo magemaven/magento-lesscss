@@ -1,3 +1,2 @@
 app/etc/modules/Magemaven_Lesscss.xml app/etc/modules/Magemaven_Lesscss.xml
 app/code/community/Magemaven/Lesscss  app/code/community/Magemaven/Lesscss
-lib/lessphp                           lib/lessphp

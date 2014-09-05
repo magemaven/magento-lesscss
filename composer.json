@@ -1,0 +1,16 @@
+{
+    "name": "r8/magento-lesscss",
+    "description": "On-the-fly LESS compiler for Magento",
+    "homepage": "https://github.com/r8/magento-lesscss",
+    "type": "magento-module",
+    "authors": [
+        {
+            "name": "Magemaven",
+            "homepage": "http://magemaven.com/"
+        }
+    ],
+    "require": {
+        "leafo/lessphp": "~0.4.0",
+        "magento-hackathon/magento-composer-installer":"*"
+    }
+}
