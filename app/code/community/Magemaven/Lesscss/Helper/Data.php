@@ -10,7 +10,7 @@
  * @copyright   Copyright (c) 2012 Sergey Storchay <r8@r8.com.ua>
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
-require_once(Mage::getBaseDir('lib') . DS . 'lessphp' . DS .'lessc.inc.php');
+require_once(Mage::getBaseDir('base') . DS . 'vendor' . DS . 'leafo' . DS . 'lessphp' . DS .'lessc.inc.php');
 
 class Magemaven_Lesscss_Helper_Data extends Mage_Core_Helper_Abstract
 {
