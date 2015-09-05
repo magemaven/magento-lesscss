@@ -1,25 +1,27 @@
 <?php
+
 /**
  * This source file is subject to the Academic Free License (AFL 3.0)
  * that is bundled with this package in the file LICENSE_AFL.txt.
  * It is also available through the world-wide-web at this URL:
- * http://opensource.org/licenses/afl-3.0.php
+ * http://opensource.org/licenses/afl-3.0.php.
  *
  * @category    Magemaven
- * @package     Magemaven_Lesscss
+ *
  * @copyright   Copyright (c) 2012 Sergey Storchay <r8@r8.com.ua>
  * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
  */
 class Magemaven_Lesscss_Model_Design_Package extends Mage_Core_Model_Design_Package
 {
     /**
-     * Get skin file url
+     * Get skin file url.
      *
-     * @param null $file
+     * @param null  $file
      * @param array $params
+     *
      * @return string
      */
-    public function getSkinUrl($file = null, array $params = array())
+    public function getSkinUrl($file = null, array $params = [])
     {
         if (empty($params['_type'])) {
             $params['_type'] = 'skin';
@@ -32,11 +34,11 @@ class Magemaven_Lesscss_Model_Design_Package extends Mage_Core_Model_Design_Pack
             $file = $this->getFilename($file, $params);
 
             if ($file) {
-                $file = str_replace(Mage::getBaseDir('media') . DS, '', $file);
+                $file = str_replace(Mage::getBaseDir('media').DS, '', $file);
                 $file = str_replace('\\', '/', $file);
                 $file = Mage::getBaseUrl('media',
-                        isset($params['_secure']) ? (bool)$params['_secure'] : null
-                    ) . $file;
+                        isset($params['_secure']) ? (bool) $params['_secure'] : null
+                    ).$file;
             }
         } else {
             $file = parent::getSkinUrl($file, $params);
@@ -46,10 +48,11 @@ class Magemaven_Lesscss_Model_Design_Package extends Mage_Core_Model_Design_Pack
     }
 
     /**
-     * Compile less file and return css file name
+     * Compile less file and return css file name.
      *
      * @param string $file
-     * @param array $params
+     * @param array  $params
+     *
      * @return string
      */
     public function getFilename($file, array $params)
