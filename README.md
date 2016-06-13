@@ -1,5 +1,7 @@
-Magemaven Lesscss
-=================
+[UNMAINTAINED] Magemaven Lesscss
+================================
+
+**This module is no longer maintained**
 
 On-the-fly LESS compiler for Magento.
 
