@@ -1,0 +1,12 @@
+{
+    "name": "magemaven/lesscss",
+    "type": "magento-module",
+    "license":"OSL-3.0",
+    "description":"On-the-fly LESS compiler for Magento.",
+    "authors":[
+        {
+            "name":"Sergey Storchay",
+            "email":"r8@r8.com.ua"
+        }
+    ]
+}
